@@ -27,7 +27,7 @@ cat > $SS_PATH/server.json <<- EOM
 	"method":"$SS_METHOD",
 	"fast_open": true,
 	"plugin": "obfs-server",
-	"plugin_opts": "obfs=http"
+	"plugin_opts": "obfs=http;fast-open"
 }
 EOM
 apt update
