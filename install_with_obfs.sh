@@ -1,12 +1,12 @@
 
 if [ -z ${SS_PASSWORD+x} ]; then 
-	export SS_PASSWORD="this_is_a_default_password"
+	export SS_PASSWORD="hk.995579.xyz"
 fi
 if [ -z ${SS_PORT+x} ]; then 
-	export SS_PORT=443
+	export SS_PORT=8443
 fi
 if [ -z ${SS_METHOD+x} ]; then 
-	export SS_METHOD="aes-256-gcm"
+	export SS_METHOD="rc4-md5"
 fi
 if [ -z ${SS_PATH+x} ]; then 
 	export SS_PATH=/root/ss/
@@ -27,7 +27,7 @@ cat > $SS_PATH/server.json <<- EOM
 	"method":"$SS_METHOD",
 	"fast_open": true,
 	"plugin": "obfs-server",
-	"plugin_opts": "obfs=tls;failover=bing.com;fast-open"
+	"plugin_opts": "obfs=http"
 }
 EOM
 apt update
