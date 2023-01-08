@@ -37,6 +37,6 @@ if [ "$(docker ps -a -q -f name=ss-server)" ]; then
     docker rm -f ss-server
 fi
 docker run -it -d -v $SS_PATH:/config --name ss-server --net=host  \
-	hitian/ss ss-server -c /config/server.json
+	hitian/ss ss-server -c ./ss/server.json
 
 netstat -nltp
