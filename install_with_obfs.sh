@@ -30,7 +30,7 @@ cat > $SS_PATH/server.json <<- EOM
 	"plugin_opts": "obfs=http;fast-open"
 }
 EOM
-apt update
+
 apt install -y docker.io
 systemctl restart docker
 if [ "$(docker ps -a -q -f name=ss-server)" ]; then
