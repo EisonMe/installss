@@ -6,7 +6,7 @@ if [ -z ${SS_PORT+x} ]; then
 	export SS_PORT=8443
 fi
 if [ -z ${SS_METHOD+x} ]; then 
-	export SS_METHOD="rc4-md5"
+	export SS_METHOD="aes-256-gcm"
 fi
 if [ -z ${SS_PATH+x} ]; then 
 	export SS_PATH=/root/ss/
